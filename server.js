@@ -17,7 +17,7 @@ const serviceAccount = require("./fire-auth-9ce8d-firebase-adminsdk-ua9q3-d7ae5e
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://fire-auth-9ce8d.firebaseio.com",
+  databaseURL: process.env.FIRE_DB,
 });
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qebvf.mongodb.net/burjAlArab?retryWrites=true&w=majority`;
